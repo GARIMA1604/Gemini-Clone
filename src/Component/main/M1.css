@@ -1,0 +1,203 @@
+/* M1.css */
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 10vh;
+    position: relative;
+    
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: rgb(207, 148, 177);
+  }
+
+.main .names{
+    display: inline;
+}
+  
+  .nav p {
+    margin: 0;
+    
+  }
+  
+  .nav img {
+    margin-right: auto;
+    width:100px;
+    border-radius: 40%;
+  }
+  
+  /* CSS for the "Gemini" text */
+  .gemini-text {
+    font-weight: bold; /* Example: make the text bold */
+    color:rgb(207, 148, 177); /* Example: change the text color */
+  }
+  
+.card img{
+    width: 40px;
+}
+.main .container{
+    max-width: 900px;
+    margin:0px;
+    display: inline;
+    
+}
+.main .greet{
+    margin:40px 0px;
+    font-size:56px;
+    color:rgb(207, 148, 177);
+    font-weight: 500;
+    padding:2px;
+}
+
+.main  .greet span{
+    background:-webkit-linear-gradient(16deg,#4b90ff,#ff5566);
+    -webkit-background-clip:text ;
+    -webkit-text-fill-color: transparent;
+}
+.main .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:15px;
+    padding:10px;
+    display: flex;
+}
+.main .card{
+    height:200px;
+    padding:50px;
+    background-color:rgb(207, 148, 177);
+    border-radius:10px;
+    position:relative;
+    cursor: pointer;
+    font-size: 25px;
+}
+.main .card img{
+    width:45px;
+    padding:5px;
+    position:absolute;
+    background-color:white;
+    bottom:10px;
+    right:10px;
+}
+
+.main .card:hover{
+    background-color:rgb(181, 179, 179);
+}
+.main-bottom{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    max-width:900px;
+    padding:0px 20px;
+    margin: auto;
+}
+.search-box{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:50px;
+    background-color: rgb(181, 179, 179);
+    padding:10px 20px;
+    border-radius: 50px;
+    width:100%;
+
+
+}
+.search-box img{
+    width:40px;
+    cursor: pointer;
+    padding:3px;
+}
+ .search-box input[type='text']{
+    flex:1;
+    background: transparent;
+    border: none;
+    outline:none;
+    padding:8px;
+    font-size:18px;
+    width:100%;
+ }
+ .search-box .div{
+    display: flex;
+    align-items: center;
+    gap:15px;
+ }
+ .main .bottom-info{
+    font-size:20px;
+    margin:15px auto ;
+    font-weight:300;
+ }
+
+
+ .resulttitle, .result-data {
+    display: flex;
+    align-items: center;
+  }
+  
+  .result img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .result p {
+    margin: 0;
+  }
+  .result-data img{
+    width:50px;
+    border-radius:50%;
+    padding-bottom:200px;
+  }
+  .result-data{
+    display: flex;
+    align-items:start;
+    gap:20px;
+  }
+  .loader{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .loader hr{
+    border-radius: 4px;
+    border: none;
+    background-color:rgb(181, 179, 179) ;
+    background: linear-gradient(to right,rgb(129, 199, 199),rgb(233, 156, 169),rgb(61, 100, 159));
+    background-size:800px 50px;
+    height:20px;
+    animation:loader 3s infinite linear;
+}
+@keyframes loader {
+    0% {
+      background-position: 0 0; /* Starting position */
+    }
+    100% {
+      background-position: 800px 0; /* Ending position */
+    }
+  }
+  .result-data p{
+    font-size:18px;
+    font-weight:300;
+    line-height:1.8;
+  }
+  @media(max-width:600px){
+    .main-bottom input{
+      flex:none;
+      width:150px;
+    }
+    .main-bottom img{
+      width :20px;
+
+    }
+    .search-box{
+      padding:5px 10px;
+    }
+    .search-box div{
+      gap:5px;
+    }
+  }
